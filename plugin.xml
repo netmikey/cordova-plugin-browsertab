@@ -11,6 +11,11 @@
         SFSafariViewController on iOS.
     </description>
 
+    <engines>
+        <!-- Require at least Android API level 22 -->
+        <engine name="cordova-android" version=">=9.0.0"/>
+    </engines>
+
     <js-module name="BrowserTab" src="www/browsertab.js">
         <clobbers target="cordova.plugins.browsertab" />
     </js-module>
@@ -25,7 +30,6 @@
         <source-file src="src/android/BrowserTab.java"
             target-dir="src/com/google/cordova/plugin" />
         <framework src="com.android.support:customtabs:26.+"/>
-        <framework src="src/android/BrowserTab.gradle" custom="true" type="gradleReference"/>
     </platform>
 
     <platform name="ios">
